@@ -1,6 +1,6 @@
 import { UnboundedASyncQueue } from '../queue'
 import { ASyncQueue } from '../queue'
-import { Registry } from 'registry/Registry';
+import { Registry } from '../registry/Registry';
 
 export class Publisher extends Registry {
     constructor() {

@@ -1,10 +1,10 @@
 import { Publisher } from "publisher/Publisher";
-import { UnboundedASyncQueue } from "queue";
-import { Subscriber, Observer } from "subscriber/Subscriber";
-import { Registry } from "registry/Registry";
-import { Ventilator } from "ventilator/Ventilator";
+import { UnboundedASyncQueue } from "../queue";
+import { Subscriber, Observer } from "../subscriber/Subscriber";
+import { Registry } from "../registry/Registry";
+import { Ventilator } from "../ventilator/Ventilator";
 
-export class Broker<T> {
+export class Broker {
 
     private registries: { [key: number]: UnboundedASyncQueue<any>; }
     private publisherSubscriber: { [key: number]: Ventilator; };
@@ -30,7 +30,7 @@ export class Broker<T> {
 
     async pull(reg: Registry) {
         let queue = this.registries[reg.getId()];
-        this.publisherSubscriber[reg.getId()].notifySubscribers(queue);
+        this.publisherSubscriber[reg.getId()].pull(queue);
     }
 
 }

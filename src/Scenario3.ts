@@ -22,11 +22,9 @@ async function scenario3() {
     ventilator.pull(Queue)
     ventilator.pull(Queue)
     ventilator.pull(Queue)
-    
+
     p1.push(Queue, 'Lorem ipsum ')
     p1.push(Queue, 'dolor sit amet ')
     p1.push(Queue, ' consectetur adipiscing elit.')
-
-
 }
 scenario3()
