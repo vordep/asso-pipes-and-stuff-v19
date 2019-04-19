@@ -5,7 +5,7 @@ import { Ventilator } from "./ventilator/Ventilator";
 import { Broker } from "./broker/Broker";
 import { Registry } from 'registry/Registry';
 
-async function scenario3() {
+async function scenario4() {
 
     let broker = new Broker();
 
@@ -53,4 +53,4 @@ async function scenario3() {
     broker.pull(p3);
 
 }
-scenario3()
+scenario4()
