@@ -1,8 +1,8 @@
 import { UnboundedASyncQueue } from "./queue";
 import { Publisher } from "./publisher/Publisher";
-import {Subscriber} from "./subscriber/Subscriber";
+import { Subscriber } from "./subscriber/Subscriber";
 
-async function scenario2() {   
+async function scenario2() {
     let Queue = new UnboundedASyncQueue<string>()
     let p1 = new Publisher()
     let subscriber_1 = new Subscriber('subscriber_1')
@@ -15,5 +15,5 @@ async function scenario2() {
     p1.push(Queue, 'Lorem ipsum ')
     p1.push(Queue, 'dolor sit amet ')
     p1.push(Queue, ' consectetur adipiscing elit.')
-} 
+}
 scenario2()

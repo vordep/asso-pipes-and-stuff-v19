@@ -8,11 +8,11 @@ export class UnboundedASyncQueue<T> implements ASyncQueue<T>{
     constructor() {
         this.waitingEnqueue = new AsyncSemaphore(0)
     }
+
     enqueue(val: T): void {
-        console.log("enqueue")
         this.queue.unshift(val)
         this.waitingEnqueue.signal()
-        
+
     }
     async dequeue(): Promise<T> {
         await this.waitingEnqueue.wait()

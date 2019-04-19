@@ -21,6 +21,8 @@
     "scripts": {
         "build": "tsc",
         "start": "tsc; node build/main.js",
-        "sc1": "tsc; node build/Scenario1.js"
+        "sc1": "tsc; node build/Scenario1.js",
+        "sc2": "tsc; node build/Scenario2.js",
+        "sc3": "tsc; node build/Scenario3.js"
     }
 }
