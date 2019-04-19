@@ -1,9 +1,10 @@
 import { UnboundedASyncQueue } from "../queue";
+import { Registry } from "registry/Registry";
 
 
 
 export class Subscriber {
-    constructor(public name: string) { }
+    constructor(public name: string) {  }
 
     async pull(queue: UnboundedASyncQueue<any>): Promise<void> {
         queue.dequeue().then(res => console.log(this.name + " " + res))
